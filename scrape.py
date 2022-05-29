@@ -7,7 +7,7 @@ maxTweets = 1000
 tweets_list = []
 
 # Using TwitterSearchScraper to scrape data and append tweets to list
-for i,tweet in enumerate(sntwitter.TwitterSearchScraper('Mana cyptocurrency').get_items()):
+for i,tweet in enumerate(sntwitter.TwitterSearchScraper('#Mana ').get_items()):
     if i>maxTweets:
         break
     tweets_list.append([tweet.date,  tweet.content])
