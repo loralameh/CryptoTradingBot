@@ -1,13 +1,13 @@
 import snscrape.modules.twitter as sntwitter
 import pandas as pd
 
-maxTweets = 1000
+maxTweets = 1000000
 
 # Creating list to append tweet data to
 tweets_list = []
 
 # Using TwitterSearchScraper to scrape data and append tweets to list
-for i,tweet in enumerate(sntwitter.TwitterSearchScraper('#Mana ').get_items()):
+for i,tweet in enumerate(sntwitter.TwitterSearchScraper('#Mana').get_items()):
     if i>maxTweets:
         break
     tweets_list.append([tweet.date,  tweet.content])
