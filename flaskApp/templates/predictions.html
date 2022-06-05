@@ -1,0 +1,60 @@
+{% extends "layout.html" %} {% block content %}
+<h1 class="display-5 fw-bold lh-1 mb-3">Daily accurate results</h1>
+<div class="col-12 col-md-6">
+  <p class="lead">
+    We care about dilivering the most accurate MANA coin predictions. check the
+    graph to see previous and current predictions.
+  </p>
+</div>
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename='graph1.js') }}"
+></script>
+<div
+  id="e02e337e-1fe7-4d4e-8ff7-86d1f767d2b2"
+  class="plotly-graph-div"
+  style="height: 100%; width: 100%"
+></div>
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename='graph2.js') }}"
+></script>
+<h1 class="display-5 fw-bold lh-1 mb-3">Detailed results</h1>
+<div class="col-12 col-md-6">
+  <p class="lead">
+    check the detailed highest and lowest predictions as well as the closeing
+    price of the day.
+  </p>
+</div>
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename='candles1.js') }}"
+></script>
+<div
+  id="9abca99b-1cf1-46b8-b207-fc2e7fd524a4"
+  class="plotly-graph-div"
+  style="height: 100%; width: 100%"
+></div>
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename='candles2.js') }}"
+></script>
+<h1 class="display-5 fw-bold lh-1 mb-3">What is Trending on Twitter</h1>
+<div class="col-12 col-md-6">
+  <p class="lead">
+    We use Natural Language Processing to analyze the tweets and predict the
+    trend. Most words in tweets are shown below. The most common words are shown
+    in large font.
+  </p>
+
+  <div class="col-10 col-sm-8 col-lg-6">
+    <img
+      src="{{twitter_pic}}"
+      class="d-block mx-lg-auto img-fluid"
+      alt="twitter"
+      width="100%"
+      height="auto"
+    />
+  </div>
+  {% endblock content %}
+</div>
