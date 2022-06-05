@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block content %}
 <h1 class="display-5 fw-bold lh-1 mb-3">Daily accurate results</h1>
 <!--LINE GRAPH SECTION -->
-<div class="d-block">
+<div class="d-block py-2">
   <div class="col-12 col-md-6">
     <p class="lead">
       We care about dilivering the most accurate MANA coin predictions. check
@@ -17,7 +17,7 @@
   <!-- script for the graph -->
   <script
     type="text/javascript"
-    src="{{ url_for('static', filename='main.js') }}"
+    src="{{ url_for('static', filename='lineGraph.js') }}"
   ></script>
   <!-- needed library for the graph -->
   <script
@@ -27,7 +27,7 @@
   <div id="chartContainer" style="height: 500px; width: 100%"></div>
 </div>
 <!--BOX GRAPH SECTION  -->
-<div class="d-block">
+<div class="d-block py-2">
   <h1 class="display-5 fw-bold lh-1 mb-3">Detailed results</h1>
   <div class="col-12 col-md-6">
     <p class="lead">
@@ -38,7 +38,7 @@
   <!-- box graph code here -->
 </div>
 <!-- TWITTER PICTURE SECTION -->
-<div class="d-block">
+<div class="d-block py-2">
   <h1 class="display-5 fw-bold lh-1 mb-3">What is Trending on Twitter</h1>
   <div class="col-12 col-md-6">
     <p class="lead">
